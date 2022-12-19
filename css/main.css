@@ -60,6 +60,7 @@
     background: var(--body-color);
     color: var(--text-color);
     transition: background .4s;
+    font-family: 'Cairo', sans-serif;
   }
   
   h1, h2, h3, h4 {
@@ -213,7 +214,7 @@
   }
 
   .nav_logo img {
-    width: 35px;
+    width: 45px;
   }
 
   .nav_logo:hover {
@@ -262,6 +263,27 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+
+  .nav_img-1,
+  .nav_img-2 {
+    position: absolute;
+    opacity: .2;
+}
+
+.nav_img-1 {
+  width: 170px;
+  top: 5rem;
+  left: -4rem;
+  transform: rotate(-30deg);
+}
+
+.nav_img-2 {
+  width: 150px;
+  right: -1rem;
+  bottom: 0;
+  transform: rotate(-30deg);
+}
+
 
   /* Show Menu  */
   .show-menu {
@@ -338,6 +360,26 @@
     color: var(--text-color);
   }
 
+  .home_leaf-1,
+.home_leaf-2 {
+  position: absolute;
+  opacity: .2;
+}
+
+.home_leaf-1 {
+  width: 80px;
+  top: 8rem;
+  left: -1rem;
+  transform: rotate(90deg);
+}
+
+.home_leaf-2 {
+  width: 100px;
+  right: -2rem;
+  bottom: 1rem;
+  transform: rotate(-15deg);
+}
+
   .button {
     display: inline-flex;
     align-items: center;
@@ -381,8 +423,8 @@
   width: 100px;
   opacity: .2;
   position: absolute;
-  right: -1.5rem;
-  bottom: 11rem;
+  left: -2.5rem;
+  bottom: -4rem;
   transform: rotate(-15deg);
 }
 
@@ -398,7 +440,7 @@
 .popular_card {
   position: relative;
   background: var(--container-color);
-  padding: 7rem 2rem 1.5rem;
+  padding: 10rem 2rem .5rem;
   box-shadow: 0 8px 20px hsla(19, 64%, 48%, .08);
   border-radius: 1rem;
   text-align: center;
@@ -418,20 +460,22 @@
 .popular_name {
   font-size: var(--h3-font-size);
   font-family: var(--title-font);
-  margin-bottom: .25rem;
+  /* margin-bottom: .25rem; */
 }
 
 .popular_description {
   display: block;
   font-size: var(--small-font-size);
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .popular_price {
   font-size: var(--h2-font-size);
   font-weight: var(--font-midium);
   color: var(--first-color);
+  margin-bottom: 0;
+
 }
 
 .popular_price .semi {
@@ -483,11 +527,11 @@
 }
 
 .recently_data-img {
-  width: 25px;
+  width: 35px;
   position: absolute;
   top: 3.5rem;
   right: 1.5rem;
-  transform: rotate(30deg);
+  /* transform: rotate(30deg); */
 }
 
 .recently_img {
@@ -542,7 +586,7 @@
 }
 
 .footer_logo img {
-  width: 25px;
+  width: 45px;
 }
 
 .footer_logo:hover {
@@ -694,7 +738,7 @@
   bottom: 3rem;
 }
 
-/* Breakpoints */
+/* ======================= Breakpoints ========================= */
 
 /* For Small Devices  */
 @media screen and (max-width: 340px) {
@@ -714,6 +758,16 @@
   }
   .home_leaf-2 {
     bottom: 0;
+  }
+
+  .home_img {
+    width: 120px;
+  }
+
+  .home_img .img_1,
+  .home_img .img_2,
+  .home_img .img_3 {
+    height: 170px;
   }
 
   .about_leaf {
@@ -796,10 +850,14 @@
     margin-top: 3rem;
   }
 
+  .home_img {
+    width: 270px;
+  }
+
   .home_img .img_1,
   .home_img .img_2, 
   .home_img .img_3 {
-    width: 270px;
+    width: 250px;
     height: 330px;
   }
 
@@ -820,8 +878,15 @@
     width: 220px;
   }
 
+  .popular_card {
+    padding-top: 14rem;
+  }
+
+  .popular_name {
+    margin-top: 1rem;
+  }
   .popular_description {
-    margin-top: 6.5rem;
+    margin-top: .5rem;
     margin-bottom: .5rem;
   }
 
@@ -926,8 +991,11 @@
     padding-block: 6rem 4rem;
   }
   .popular_card {
-    padding: 7.5rem 2rem 2rem;
-    border-radius: 1.5rem;
+    padding-top: 14rem;
+  }
+
+  .popular_name {
+    margin-top: 1rem;
   }
   .popular_img {
     width: 220px;
