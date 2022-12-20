@@ -25,25 +25,25 @@ const linkAction = () => {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+// /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+// const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+// function scrollActive(){
+//     const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 58
-        let sectionId = current.getAttribute('id')
+//     sections.forEach(current =>{
+//         const sectionHeight = current.offsetHeight
+//         const sectionTop = current.offsetTop - 58
+//         let sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+//             document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
+//         }else{
+//             document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
+//         }
+//     })
+// }
+// window.addEventListener('scroll', scrollActive)
 
 // Show Scroll Up 
 const scrollUp = () => {
@@ -83,6 +83,31 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+// ==================== Section Animation =================== //
+const favSection = document.getElementById("fav")
+const progress = document.querySelectorAll(".progress span")
+
+window.onscroll = function() {
+    if (window.scrollY >= favSection.offsetTop) {
+        progress.forEach((ele) => {
+            ele.style.width = ele.dataset.width
+        })
+    }
+}
+
+// ========================== Fav Icon Fill ======================= //
+const icons = document.querySelectorAll('.fav_icon-fill')
+const votes = document.querySelectorAll('.vote_number')
+if(icons) {
+  icons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      icon.classList.toggle('color')
+    })
+  })
+}
+
+
+
 // Scroll Reveal Animation 
 const sr = ScrollReveal({
   origin: 'top',
@@ -95,4 +120,4 @@ sr.reveal('.home_img, .footer_logo, .footer_description, .footer_content, .foote
 sr.reveal('.home_data', {origin: 'bottom'})
 sr.reveal('.about_data, .recently_data', {origin: 'left'})
 sr.reveal('.about_img, .recently_img', {origin: 'right'})
-sr.reveal('.popular_card', {interval: 100})
+sr.reveal('.popular_card' , {interval: 100})
