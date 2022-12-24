@@ -25,25 +25,25 @@ const linkAction = () => {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-// /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-// const sections = document.querySelectorAll('section[id]')
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
-// function scrollActive(){
-//     const scrollY = window.pageYOffset
+function scrollActive(){
+    const scrollY = window.pageYOffset
 
-//     sections.forEach(current =>{
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.offsetTop - 58
-//         let sectionId = current.getAttribute('id')
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 58
+        let sectionId = current.getAttribute('id')
 
-//         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-//             document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
-//         }else{
-//             document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
-//         }
-//     })
-// }
-// window.addEventListener('scroll', scrollActive)
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 // Show Scroll Up 
 const scrollUp = () => {
@@ -105,6 +105,16 @@ if(icons) {
     })
   })
 }
+
+// ============================ Testimonials Swiper ========================== //
+let swiperTestimonials = new Swiper(".testimonials_container", {
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+})
 
 
 

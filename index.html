@@ -9,6 +9,8 @@
   <link rel="shortcut icon" href="imgs/favicon.jpg" type="image/x-icon">
   <!-- Remix Icon  -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Swiper Css  -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <!-- Main CSS File  -->
   <link rel="stylesheet" href="css/main.css">
   <title>EgyTravel</title>
@@ -26,7 +28,7 @@
     <div class="nav_menu" id="nav-menu">
       <ul class="nav_list">
         <li class="nav_item">
-          <a href="#home" class="nav_link nav-or active-link">الرئيسية</a>
+          <a href="#home" class="nav_link active-link">الرئيسية</a>
         </li>
         
         <li class="nav_item">
@@ -42,7 +44,7 @@
         </li>
 
         <li class="nav_item">
-          <a href="#recently" class="nav_link">تواصل معنا</a>
+          <a href="#contact" class="nav_link">تواصل معنا</a>
         </li>
       </ul>
 
@@ -85,7 +87,9 @@
           </h1>
           <p class="home_description">
             احجز تذكرتك واستكشف معنا اجمل واعرق معالم مصر من خلال 
-            رحلات يومية الى مختلف المعالم السياحية والاثرية
+            رحلات يومية الى مختلف المعالم السياحية والاثرية, استمتع بجودة متميزة 
+            توفرها ايجيترافل واحظى بتجربة لا مثيل لها بمختلف وسائل الراحة والرفاهية, 
+            بالاضافة الى تأمين اروع الحجوزات الفندقية واشهر المطاعم في المنطقة
           </p>
 
           <a href="#" class="button">
@@ -108,12 +112,16 @@
             </h2>
   
             <p class="about_description">
-              احجز تذكرتك واستكشف معنا اجمل واعرق معالم مصر من خلال 
-              رحلات يومية الى مختلف المعالم السياحية والاثرية
+              منذ اول انطلاقة لنا عام 1996 من مكتب صغير في القاهرة امتكلنا رؤيتنا 
+              في التوسع والوصول الى اكثر من مجرد مكتب لتقديم الخدمات السياحية
+              دوما مارغبنا بأن نكون في كل مكان يرغب به عملائنا ان نكون فيه وان 
+              نقدم كل ما يرغبون برؤيته بداية من اول حجز لهم ووصولا الى نهاية الرحلة 
+              والآن نحن من اهم واكبر الشركات في هذا المجال وعلى نطاق دولي ولدينا
+              فروع في جميع محافظات مصر وايضا موقعنا الاكتروني لتعرف كل جديد عنا
             </p>
           </div>
   
-          <img src="imgs/about.jpg" alt="" class="about_img">
+          <img src="imgs/recently.jpg" alt="" class="about_img">
         </div>
   
         <img src="imgs/pyramid.png" alt="" class="about_leaf">
@@ -142,7 +150,7 @@
           <img src="imgs/popular_2.jpg" alt="" class="popular_img">
 
           <h3 class="popular_name">الاسكندرية</h3>
-          <span class="popular_description">عروس البحر الاحمر</span>
+          <span class="popular_description">عروس البحر الابيض</span>
 
           <span class="popular_price">1549 <span class="semi">EGP</span></span>
 
@@ -176,8 +184,13 @@
               </h2>
     
               <p class="recently_description">
-                احجز تذكرتك واستكشف معنا اجمل واعرق معالم مصر من خلال 
-                رحلات يومية الى مختلف المعالم السياحية والاثرية
+                في هذه الرحلة والتي تم اختيارها من قبل الاغلبية في موقعنا هنا من 
+                خلال ميزة اختيار افضل ثلاث رحلات وستعرف اكثر عن هذا في القسم التالي 
+                لقسمنا هذا, شارك في رحلتنا الى اهرامات الجيزة 3650 مسافر من مختلف بلاد الوطن العربي 
+                في رحلة دامت سبعة ايام مع احد افضل طواقم ايجيترافل المتمرسين مع تأمين افضل 
+                الفنادق المحيطة لنا ومثيلاتها من المطاعم, بتكلفة 3999 جنيه مصري لكل شخص 
+                شاملة كل شيء خلال هذه الرحلة من فنادق ومطاعم وتذاكر ذهاب وايابمع كافة الميزات الاخرى
+                التي تقدمها ايجيترافل
               </p>
     
               <a href="#" class="button">
@@ -244,7 +257,85 @@
           </div>
         </section>
 
-        <!-- =========================  Footer  =========================  -->
+  <!-- ========================= Testimonials ============================ -->
+  <section class="testimonials section">
+    <div class="title_img">
+      <img src="imgs/double_quote.png" alt="" class="quote_img-up">
+      <h2 class="section_title">تجربة العملاء</h2>
+      <img src="imgs/double_quote.png" alt="" class="quote_img-down">
+    </div>
+    <span class="section_subtitle">شارك تجربتك معنا</span>
+    <div class="container section_border">
+      <div class="testimonials_container swiper">
+        <div class=" testi_card swiper-wrapper">
+          <!-- Testimonials 1 -->
+          <div class="testimonials_content swiper-slide">
+            <p class="testimonials_description">
+              التعامل مع شركة ايجيترافل كان دوما من اكثر ما يميز هذه الشركة عن باقي
+              الشركات المجاورة لها في هذا المجال, فهناك خدمة عملاء على الدوام ناهيك عن 
+              الراحة التي توفرها الشركة في الحجوزات من خلال موقعها الالكتروني, بالاضافة الى الدقة في المواعيد 
+              وحسن الضيافة والسرعة في اداء العاملين هناك, فعلا ان ايجيترافل هي الافضل على الاطلاق
+            </p>
+
+            <div>
+              <h3 class="testimonials_name">صافيناز احمد</h3>
+            </div>
+          </div>
+
+          <!-- Testimonials 2 -->
+          <div class="testimonials_content swiper-slide">
+            <p class="testimonials_description">
+              التعامل مع شركة ايجيترافل كان دوما من اكثر ما يميز هذه الشركة عن باقي
+              الشركات المجاورة لها في هذا المجال, فهناك خدمة عملاء على الدوام ناهيك عن 
+              الراحة التي توفرها الشركة في الحجوزات من خلال موقعها الالكتروني, بالاضافة الى الدقة في المواعيد 
+              وحسن الضيافة والسرعة في اداء العاملين هناك, فعلا ان ايجيترافل هي الافضل على الاطلاق
+            </p>
+
+            <div>
+              <h3 class="testimonials_name">تيا السويفي</h3>
+            </div>
+          </div>
+          
+          <!-- Testimonials 3 -->
+          <div class="testimonials_content swiper-slide">
+            <p class="testimonials_description">
+              التعامل مع شركة ايجيترافل كان دوما من اكثر ما يميز هذه الشركة عن باقي
+              الشركات المجاورة لها في هذا المجال, فهناك خدمة عملاء على الدوام ناهيك عن 
+              الراحة التي توفرها الشركة في الحجوزات من خلال موقعها الالكتروني, بالاضافة الى الدقة في المواعيد 
+              وحسن الضيافة والسرعة في اداء العاملين هناك, فعلا ان ايجيترافل هي الافضل على الاطلاق
+            </p>
+
+            <div>
+              <h3 class="testimonials_name">تميم فيومي</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= Contact ======================== -->
+  <section class="contact section" id="contact">
+    <h1 class="section_title">تواصل معنا</h1>
+    <span class="section_subtitle subtitle_contact">ابقى على تواصل</span>
+    <div class="contact_container container">
+      <form action="" class="contact_form">
+        <input type="text" placeholder="الإسم" required>
+        <input type="email" placeholder="الإيميل" required>
+        <textarea rows="6" placeholder="نص الرسالة"></textarea>
+        <input class="form_button" type="submit" value="إرسال">
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================  Footer  =========================  -->
   <footer class="footer">
     <div class="footer_container container grid">
       <div>
@@ -284,7 +375,7 @@
         </div>
 
         <div>
-          <h3 class="footer_title">استعلامات</h3>
+          <h3 class="footer_title">للاستفسار</h3>
 
           <ul class="footer_links">
             <li>
@@ -364,6 +455,8 @@
 
   <!-- Scroll Reveal -->
   <script src="js/scrollreveal.min.js"></script>
+  <!-- Swiper js -->
+  <script src="js/swiper-bundle.min.js"></script>
   <!-- Main JS File  -->
   <script src="js/main.js"></script>
 </body>
