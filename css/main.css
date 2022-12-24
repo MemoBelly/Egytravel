@@ -757,7 +757,29 @@
 
 /* ========================== Contact ===================== */
 .contact_container {
-  padding: 1rem 3rem;
+  padding: 1rem .5rem;
+}
+
+.contact {
+  position: relative;
+}
+
+.contact_pic-up {
+  position: absolute;
+  width: 120px;
+  opacity: .3;
+  transform: rotate(-20deg);
+  right: -2rem;
+  top: 1rem;
+}
+
+.contact_pic-down {
+  position: absolute;
+  width: 120px;
+  opacity: .3;
+  transform: rotate(20deg);
+  left: -2rem;
+  bottom: -1rem;
 }
 
 .contact_form {
@@ -1107,8 +1129,6 @@
     font-size: 1.25rem;
   }
 
-
-
   .nav_list {
     flex-direction: row-reverse;
     column-gap: 2.5rem;
@@ -1176,6 +1196,20 @@
 
   .fav_card:first-child {
     margin-top: 0;
+  }
+
+  .contact_container {
+    padding: 1rem 3rem;
+  }
+  .contact_pic-up,
+  .contact_pic-down {
+    width: 200px;
+  }
+  .contact_pic-up {
+    top: -2rem;
+  }
+  .contact_pic-down {
+    bottom: -5rem;
   }
 
   .footer_content {
@@ -1254,9 +1288,9 @@
   }
 
   .about_container {
-    grid-template-columns: 400px 450px;
+    grid-template-columns: 430px 460px;
     align-items: center;
-    column-gap: 7rem;
+    column-gap: 6rem;
   }
   .about_data {
     order: 1;
@@ -1297,9 +1331,9 @@
   }
 
   .recently_container {
-    grid-template-columns: 450px 380px;
+    grid-template-columns: 400px 450px;
     align-items: center;
-    column-gap: 7rem;
+    column-gap: 6rem;
     padding-bottom: 2rem;
   }
 
